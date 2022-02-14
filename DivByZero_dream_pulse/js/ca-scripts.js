@@ -18,11 +18,19 @@ function toggleColors() {
     let el = document.querySelectorAll('.tm-white-rect');
     let el2 = document.querySelectorAll('.tm-color-primary')
 
+    function Color1(element) {
+        element.classList.add('tm-blue-rect');
+        element.classList.remove('tm-white-rect');
+        console.log(this.valueOf())
+    }
+
+    el.forEach(Color1,"HI");
+/*
     for (i = 0; i < el.length; ++i) {
         el[i].classList.add('tm-blue-rect');
         el[i].classList.remove('tm-white-rect');
     }
-
+*/
     for (i = 0; i < el2.length; ++i) {
         el2[i].classList.add('tm-color-green');
         el2[i].classList.remove('tm-color-primary');
